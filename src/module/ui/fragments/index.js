@@ -1,1 +1,1 @@
-import { Header } from './Header';import { Tabs } from './Tabs';import { Input } from './Input';import { PasswordOptions } from './PasswordOptions';export default ui => ({  Header: Header(ui),  Tabs: Tabs(ui),  Input: Input(ui),  PasswordOptions: PasswordOptions(ui),});
+import { Header } from './Header';import { Tabs } from './Tabs';import { PasswordOptions } from './PasswordOptions';export default ui => ({  Header: Header(ui),  Tabs: Tabs(ui),  PasswordOptions: PasswordOptions(ui),});
