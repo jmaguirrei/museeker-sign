@@ -1,6 +1,6 @@
 
 
-const breakpoint = '500px';
+const breakpoint = '768px';
 
 export const Modal = ui => {
 
@@ -29,9 +29,9 @@ export const Modal = ui => {
       modal: `
         position: relative;
         background: white;
-        min-width: ${breakpoint};
+        min-width: 500px;
         width: 40%;
-        max-width: 40%;
+        max-width: 500px;
         min-height: 90%;
         max-height: 90%;
         border-radius: 10px;
@@ -40,6 +40,8 @@ export const Modal = ui => {
           & {
             min-height: 100%;
             min-width: 100%;
+            max-width: 100%;
+            width: 100%;
             border-radius: 0;
           }
         }
