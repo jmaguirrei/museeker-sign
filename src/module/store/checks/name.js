@@ -1,0 +1,1 @@
+const MIN_LENGTH = 5;export const name = str => {  const result = str.trim().length >= MIN_LENGTH;  return {    result,    message: result ? null : {      en: `At least ${MIN_LENGTH} characters`,      es: `Mínimo ${MIN_LENGTH} caracteres`,    },  };};

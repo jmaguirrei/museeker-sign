@@ -1,0 +1,1 @@
+export { name } from './name';export { email } from './email';export { password } from './password';/*  Standard checks fields need to pass before proceeding further*/

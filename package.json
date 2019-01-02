@@ -1,0 +1,32 @@
+{
+  "name": "site-system",
+  "version": "0.0.1",
+  "author": "José Manuel Aguirre",
+  "license": "MIT",
+  "scripts": {
+    "b-clean": "rimraf dist",
+    "b-copy": "cpy './src/public/app/*' '!./src/public/app/*.js' dist",
+    "b-js": "parcel build ./src/public/app/sw.js && parcel build ./src/public/app/app.js",
+    "build": "NODE_ENV=production npm run b-clean && npm run b-copy && npm run b-js",
+    "install-prod": "npm install && npm install --save @jmaguirrei/belt @jmaguirrei/ui @jmaguirrei/store @jmaguirrei/server",
+    "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/' && npm install",
+    "start-prod": "node start-prod.js",
+    "start-dev": "nodemon start-dev.js",
+    "browser": "parcel ./src/public/app/index.html",
+    "git-pack": "npm run build && git add . && git commit -m 'Initial commit' && git push"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0"
+  },
+  "dependencies": {
+    "@jmaguirrei/belt": "0.0.14",
+    "@jmaguirrei/server": "0.0.33",
+    "@jmaguirrei/store": "0.0.31",
+    "@jmaguirrei/ui": "0.0.75",
+    "@sendgrid/mail": "^6.3.1"
+  }
+}
