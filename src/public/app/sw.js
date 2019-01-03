@@ -5,7 +5,6 @@ const cacheName = 'v1';
 const cacheFiles = [
   './app.js',
   './index.html',
-  './favicon.ico',
   'https://fonts.googleapis.com/css?family=Source+Sans+Pro',
 ];
 

@@ -6,7 +6,7 @@
   "scripts": {
     "b-clean": "rimraf dist",
     "b-copy-1": "cpy './src/public/app/*.html' './src/public/app/*.json' dist",
-    "b-copy-2": "cpy './src/public/app/icons' dist/icons",
+    "b-copy-2": "cpy '../_root/icons' dist/icons",
     "b-js": "parcel build ./src/public/app/sw.js && parcel build ./src/public/app/app.js",
     "build": "NODE_ENV=production npm run b-clean && npm run b-copy-1 && npm run b-copy-2 && npm run b-js",
     "install-prod": "npm install && npm install --save @jmaguirrei/belt @jmaguirrei/ui @jmaguirrei/store @jmaguirrei/server",
