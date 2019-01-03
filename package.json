@@ -15,7 +15,7 @@
     "start-dev": "nodemon start-dev.js",
     "browser": "parcel ./src/public/app/index.html",
     "git-initial": "git add . && git commit -m 'Initial commit' && git push",
-    "git-pack": "npm run build && npm run git-initial"
+    "git-pack": "npm run update-jmaguirrei && npm run build && npm run git-initial"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@jmaguirrei/belt": "0.0.14",
-    "@jmaguirrei/server": "0.0.33",
-    "@jmaguirrei/store": "0.0.31",
+    "@jmaguirrei/server": "0.0.36",
+    "@jmaguirrei/store": "0.0.33",
     "@jmaguirrei/ui": "0.0.75",
     "@sendgrid/mail": "^6.3.1"
   }
