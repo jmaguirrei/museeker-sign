@@ -1,13 +1,14 @@
 {
-  "name": "site-system",
+  "name": "museeker-sign",
   "version": "0.0.1",
   "author": "José Manuel Aguirre",
   "license": "MIT",
   "scripts": {
     "b-clean": "rimraf dist",
-    "b-copy": "cpy './src/public/app/*' '!./src/public/app/*.js' dist",
+    "b-copy-1": "cpy './src/public/app/*.html' './src/public/app/*.json' dist",
+    "b-copy-2": "cpy './src/public/app/icons' dist/icons",
     "b-js": "parcel build ./src/public/app/sw.js && parcel build ./src/public/app/app.js",
-    "build": "NODE_ENV=production npm run b-clean && npm run b-copy && npm run b-js",
+    "build": "NODE_ENV=production npm run b-clean && npm run b-copy-1 && npm run b-copy-2 && npm run b-js",
     "install-prod": "npm install && npm install --save @jmaguirrei/belt @jmaguirrei/ui @jmaguirrei/store @jmaguirrei/server",
     "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/' && npm install",
     "start-prod": "node start-prod.js",
