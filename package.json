@@ -4,19 +4,27 @@
   "author": "José Manuel Aguirre",
   "license": "MIT",
   "scripts": {
-    "b-clean": "rimraf dist",
-    "b-copy-1": "cpy './src/public/app/*.html' './src/public/app/*.json' dist",
-    "b-copy-2": "cpy '../_root/icons' dist/icons",
-    "b-js": "parcel build ./src/public/app/sw.js && parcel build ./src/public/app/app.js",
-    "build": "NODE_ENV=production npm run b-clean && npm run b-copy-1 && npm run b-copy-2 && npm run b-js",
-    "install-prod": "npm install && npm install --save @jmaguirrei/belt @jmaguirrei/ui @jmaguirrei/store @jmaguirrei/server",
-    "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/' && npm install",
-    "start-prod": "node start-prod.js",
-    "start-dev": "nodemon start-dev.js",
-    "browser": "parcel ./src/public/app/index.html",
+
+    "b1": "rimraf dist",
+    "b2": "cpy './src/public/app/*.html' './src/public/app/*.json' dist",
+    "b3": "cpy '../_root/icons' dist/icons",
+    "b4": "parcel build ./src/public/app/sw.js && parcel build ./src/public/app/app.js",
+    "build": "NODE_ENV=production npm run b1 && npm run b2 && npm run b3 && npm run b4",
     "git-initial": "git add . && git commit -m 'Initial commit' && git push",
-    "git-pack": "npm run update-jmaguirrei && npm run build && npm run git-initial"
+    "git-pack": "npm run update-jmaguirrei && npm run build && npm run git-initial",
+
+    "i1": "npm install --save @jmaguirrei/belt",
+    "i2": "npm install --save @jmaguirrei/ui",
+    "i3": "npm install --save @jmaguirrei/store",
+    "i4": "npm install --save @jmaguirrei/server",
+    "i-prod": "npm install && npm run i1 && npm run i2 && npm run i3 && npm run i4",
+    "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/'",
+
+    "browser": "parcel ./src/public/app/index.html",
+    "start-dev": "nodemon start-dev.js",
+    "start-prod": "node start-prod.js"
   },
+
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-module-resolver": "^3.1.1",
@@ -24,6 +32,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0"
   },
+
   "dependencies": {
     "@jmaguirrei/belt": "0.0.14",
     "@jmaguirrei/server": "0.0.36",
