@@ -13,23 +13,25 @@ const nodeEnv = process.env.NODE_ENV || 'development';
 const envFile = require('../../env.json');
 
 const {
-  HTTP_PORT,
   BASE_URL,
+  HTTP_PORT,
   MONGO_URI,
   SENDGRID_API_KEY,
+  USE_SERVICE_WORKER,
 } = envFile[nodeEnv];
 
 initServices({ SENDGRID_API_KEY });
 
 const config = {
-  mongoURI: MONGO_URI,
-  mongoCollection: 'sign',
-  httpPort: HTTP_PORT,
   baseUrl: BASE_URL,
-  methods,
-  routes,
   defaultRoute: 'signin',
   distFolder: path.join(__dirname, '/../../dist'),
+  httpPort: HTTP_PORT,
+  methods,
+  mongoCollection: 'sign',
+  mongoURI: MONGO_URI,
+  routes,
+  useServiceWorker: USE_SERVICE_WORKER,
 };
 
 server.init(config)
