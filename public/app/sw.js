@@ -3,8 +3,8 @@
 
 const cacheName = 'v1';
 const cacheFiles = [
-  './app.js',
-  './index.html',
+  './base-sign/app.js',
+  './base-sign/index.html',
   'https://fonts.googleapis.com/css?family=Source+Sans+Pro',
 ];
 
