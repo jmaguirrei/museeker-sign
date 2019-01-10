@@ -3,12 +3,16 @@
     <!-- General Settings -->
     <meta charset='utf-8'>
     <meta http-equiv='content-language' content='en-us'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover'>
     <base href='{{ base_href }}'>
 
     <!-- Meta Tags -->
     <title>Museeker</title>
     <meta name='description' content='Museeker'>
+    <meta name='theme-color' content='#6A2182'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-title' content='Museeker'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='#6A2182'>
 
     <!-- Static Assets -->
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet'>
@@ -16,15 +20,37 @@
     <link type='image/x-icon' rel='icon' href='icons/favicon-32x32.png'>
 
     <!-- icons -->
-    <link rel='apple-touch-icon' sizes='180x180' href='icons/apple-touch-icon.png'>
-    <link rel='icon' type='image/png' href='icons/favicon-32x32.png' sizes='32x32'>
-    <link rel='icon' type='image/png' href='icons/favicon-16x16.png' sizes='16x16'>
-    <!-- <link rel='mask-icon' href='./icons/safari-pinned-tab.svg' color='<%= themeColor %>'> -->
+    <link rel='apple-touch-icon' sizes='57x57' href='/apple-touch-icon-57x57.png'>
+    <link rel='apple-touch-icon' sizes='60x60' href='/apple-touch-icon-60x60.png'>
+    <link rel='apple-touch-icon' sizes='72x72' href='/apple-touch-icon-72x72.png'>
+    <link rel='apple-touch-icon' sizes='76x76' href='/apple-touch-icon-76x76.png'>
+    <link rel='apple-touch-icon' sizes='114x114' href='/apple-touch-icon-114x114.png'>
+    <link rel='apple-touch-icon' sizes='120x120' href='/apple-touch-icon-120x120.png'>
+    <link rel='apple-touch-icon' sizes='144x144' href='/apple-touch-icon-144x144.png'>
+    <link rel='apple-touch-icon' sizes='152x152' href='/apple-touch-icon-152x152.png'>
+    <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon-180x180.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'>
+    <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#6A2182'>
+    <meta name='msapplication-TileColor' content='#6A2182'>
+    <meta name='theme-color' content='#ffffff'>
+
+    <!-- splash -->
+    <link href='splash/iphone5_splash.png' media='(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+    <link href='splash/iphone6_splash.png' media='(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+    <link href='splash/iphoneplus_splash.png' media='(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
+    <link href='splash/iphonex_splash.png' media='(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
+    <link href='splash/iphonexr_splash.png' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+    <link href='splash/iphonexsmax_splash.png' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
+    <link href='splash/ipad_splash.png' media='(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+    <link href='splash/ipadpro1_splash.png' media='(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+    <link href='splash/ipadpro3_splash.png' media='(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+    <link href='splash/ipadpro2_splash.png' media='(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+
 
     <!-- Global styles + Component Styles via dynamic classes -->
     <style id='global-styles'>
-      body { margin: 0; font-family: 'Source Sans Pro', sans-serif;
-      -webkit-tap-highlight-color: rgba(0,0,0,0); }
+      body { margin: 0; font-family: 'Source Sans Pro', sans-serif; -webkit-tap-highlight-color: rgba(0,0,0,0); }
       div { box-sizing: border-box; }
       svg { user-select: none; }
     </style>
@@ -36,3 +62,6 @@
   </body>
   <script type='text/javascript' charset='utf-8' src='app.js'></script>
 </html>
+
+
+

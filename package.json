@@ -7,7 +7,9 @@
 
     "b1": "rimraf dist",
     "b2": "cpy '../_root/public/*.html' '../_root/public/*.json' dist",
-    "b3": "cpy '../_root/public/icons' dist/icons",
+    "b3a": "cpy '../_root/public/icons' dist/icons",
+    "b3b": "cpy '../_root/public/splash' dist/splash",
+    "b3": "npm run b3a && npm run b3b",
     "b4": "parcel build ./public/sw.js && parcel build ./public/app.js",
     "build": "NODE_ENV=production npm run b1 && npm run b2 && npm run b3 && npm run b4",
     "git-initial": "git add . && git commit -m 'Initial commit' && git push",
@@ -20,7 +22,7 @@
     "i-prod": "npm install && npm run i1 && npm run i2 && npm run i3 && npm run i4",
     "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/'",
 
-    "browser": "parcel --no-hmr ./public/app.js",
+    "browser": "parcel --no-hmr ./public/app.js ./public/sw.js",
     "start-dev": "nodemon start-dev.js",
     "start-prod": "node start-prod.js"
   },
@@ -35,7 +37,7 @@
 
   "dependencies": {
     "@jmaguirrei/belt": "0.0.14",
-    "@jmaguirrei/server": "0.0.44",
+    "@jmaguirrei/server": "0.0.45",
     "@jmaguirrei/store": "0.0.36",
     "@jmaguirrei/ui": "0.0.76",
     "@sendgrid/mail": "^6.3.1"
