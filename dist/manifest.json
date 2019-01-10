@@ -1,5 +1,4 @@
 {
-  "manifest_version": 1,
   "version": "1.0.0",
   "name": "Museeker App",
   "short_name": "Museeker",
@@ -16,7 +15,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/app",
   "display": "standalone",
   "background_color": "#121738",
   "theme_color": "#d17c78"

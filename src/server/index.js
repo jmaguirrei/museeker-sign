@@ -28,7 +28,7 @@ const config = {
   distFolder: path.join(__dirname, '/../../dist'),
   httpPort: HTTP_PORT,
   methods,
-  mongoCollection: 'sign',
+  moduleName: 'sign',
   mongoURI: MONGO_URI,
   routes,
   useServiceWorker: USE_SERVICE_WORKER,

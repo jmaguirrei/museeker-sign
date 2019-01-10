@@ -6,9 +6,9 @@
   "scripts": {
 
     "b1": "rimraf dist",
-    "b2": "cpy './public/app/*.html' './public/app/*.json' dist",
-    "b3": "cpy './public/app/icons' dist/icons",
-    "b4": "parcel build ./public/app/sw.js && parcel build ./public/app/app.js",
+    "b2": "cpy '../_root/public/*.html' '../_root/public/*.json' dist",
+    "b3": "cpy '../_root/public/icons' dist/icons",
+    "b4": "parcel build ./public/sw.js && parcel build ./public/app.js",
     "build": "NODE_ENV=production npm run b1 && npm run b2 && npm run b3 && npm run b4",
     "git-initial": "git add . && git commit -m 'Initial commit' && git push",
     "git-pack": "npm run update-jmaguirrei && npm run build && npm run git-initial",
@@ -20,7 +20,7 @@
     "i-prod": "npm install && npm run i1 && npm run i2 && npm run i3 && npm run i4",
     "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/'",
 
-    "browser": "parcel --no-hmr ./public/app/index.html",
+    "browser": "parcel --no-hmr ./public/app.js",
     "start-dev": "nodemon start-dev.js",
     "start-prod": "node start-prod.js"
   },

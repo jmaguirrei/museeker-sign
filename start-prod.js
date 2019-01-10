@@ -20,7 +20,7 @@ require('babel-register')({
         alias: {
           '/lib': './src/lib',
           '/module': './src/module',
-          '/public': './src/public',
+          '/public': './public',
           '/server': './src/server'
         },
       }
