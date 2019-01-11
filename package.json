@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "b1": "rimraf dist",
-    "b2": "cpy '../_root/public/*.html' '../_root/public/*.json' dist",
+    "b2a": "cpy '../_root/public/*.html' dist",
+    "b2b": "cpy '../_root/public/*.json' dist",
+    "b2": "npm run b2a && npm run b2b",
     "b3a": "cpy '../_root/public/icons' dist/icons",
     "b3b": "cpy '../_root/public/splash' dist/splash",
     "b3": "npm run b3a && npm run b3b",
@@ -41,8 +43,8 @@
 
   "dependencies": {
     "@jmaguirrei/belt": "0.0.14",
-    "@jmaguirrei/server": "0.0.45",
-    "@jmaguirrei/store": "0.0.37",
+    "@jmaguirrei/server": "0.0.47",
+    "@jmaguirrei/store": "0.0.38",
     "@jmaguirrei/ui": "0.0.76",
     "@sendgrid/mail": "^6.3.1"
   }
