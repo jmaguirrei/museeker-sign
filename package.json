@@ -11,7 +11,7 @@
     "b3a": "cpy '../_root/public/icons' dist/icons",
     "b3b": "cpy '../_root/public/splash' dist/splash",
     "b3": "npm run b3a && npm run b3b",
-    "b4": "parcel build ./public/sw.js && parcel build ./public/app.js",
+    "b4": "parcel build ../_root/public/sw.js && parcel build ./src/client/app.js",
     "build": "NODE_ENV=production npm run b1 && npm run b2 && npm run b3 && npm run b4",
 
     "git-i1": "git add .",
@@ -28,7 +28,7 @@
     "i-prod": "npm install && npm run i1 && npm run i2 && npm run i3 && npm run i4",
     "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/'",
 
-    "browser": "parcel --no-hmr ./public/app.js ./public/sw.js",
+    "browser": "parcel --no-hmr ./public/app.js ../_root/public/sw.js",
     "start-dev": "nodemon start-dev.js",
     "start-prod": "node start-prod.js"
   },

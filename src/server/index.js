@@ -5,7 +5,7 @@ import path from 'path';
 import server from '@jmaguirrei/server';
 import methods from '/server/api/methods';
 import initServices from '/server/lib/services';
-import { routes } from '/module/routes';
+import { routes } from '/lib/routes';
 
 const nodeEnv = process.env.NODE_ENV || 'development';
 const envFile = require('../../env.json');
