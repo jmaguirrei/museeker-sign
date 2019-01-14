@@ -11,7 +11,9 @@
     "b3a": "cpy '../_root/public/icons' dist/icons",
     "b3b": "cpy '../_root/public/splash' dist/splash",
     "b3": "npm run b3a && npm run b3b",
-    "b4": "parcel build ../_root/public/sw.js && parcel build ./src/client/app.js",
+    "b4a": "parcel build ../_root/public/sw/index.js -o sw.js",
+    "b4b": "parcel build ./src/client/app.js -o app.js",
+    "b4": "npm run b4a && npm run b4b",
     "build": "NODE_ENV=production npm run b1 && npm run b2 && npm run b3 && npm run b4",
 
     "git-i1": "git add .",
