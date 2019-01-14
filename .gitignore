@@ -1,10 +1,12 @@
 
+.babelrc
 .cache/*
-node_modules/*
+.DS_Store
+.eslintignore
+.eslintrc
+dist/icons/*
+dist/splash/*
 env.json
+node_modules/*
 package-lock.json
 start-dev.js
-.eslintignore
-.babelrc
-.eslintrc
-.DS_Store
