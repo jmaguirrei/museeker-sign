@@ -35,6 +35,10 @@
     "start-prod": "node start-prod.js"
   },
 
+  "browserslist": [
+    "since 2017-06"
+  ],
+
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-module-resolver": "^3.1.1",
