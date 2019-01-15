@@ -16,7 +16,6 @@
     <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
 
     <!-- Static Assets -->
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet'>
     <link rel='manifest' href='manifest.json'>
     <link type='image/x-icon' rel='icon' href='../icons/favicon-32x32.png'>
 
@@ -50,6 +49,11 @@
 
     <!-- Global styles + Component Styles via dynamic classes -->
     <style id='global-styles'>
+      @font-face {/* latin */
+        font-family: 'Source Sans Pro'; font-style: normal; font-weight: 400;
+        src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
       body { margin: 0; font-family: 'Source Sans Pro', sans-serif; -webkit-tap-highlight-color: rgba(0,0,0,0); }
       div { box-sizing: border-box; }
       svg { user-select: none; }
