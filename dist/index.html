@@ -56,11 +56,11 @@
       a { text-decoration: none; color: inherit; cursor: inherit; }
       #root { position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
     </style>
-    <style id='component-styles'></style>
+    <style id='component-styles'>{{ component_styles }}</style>
 
   </head>
   <body>
-    <div id='root'></div>
+    <div id='root'>{{ root_body }}</div>
     <script type='text/javascript' charset='utf-8' src='app.js'></script>
     <noscript>Your browser does not support JavaScript!</noscript>
   </body>
