@@ -23,7 +23,7 @@
     "i-prod": "npm install && npm run i1 && npm run i2 && npm run i3 && npm run i4",
     "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/'",
 
-    "browser": "parcel --no-hmr ./public/app.js ../_root/public/sw/index.js",
+    "browser": "parcel --no-hmr ./src/client/app.js",
     "start-dev": "nodemon start-dev.js",
     "start-prod": "node start-prod.js"
   },

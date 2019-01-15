@@ -52,7 +52,7 @@ export const Button = ui => {
         >
           ${
             href
-            ? ui.unsafeHTML(`<a href=${href} class=${classes.a}>${text}</a>`)
+            ? ui.unsafeHTML(`<a href='${href}' class='${classes.a}'>${text}</a>`)
             : text
           }
         </div>
