@@ -41,8 +41,8 @@ export const Tabs = ui => {
         text-align: center;
         cursor: pointer;
         user-select: none;
-        color: ${isSelected ? color : 'hsl(0, 0%, 55%)'};
-        background: ${isSelected ? 'white' : 'hsl(0, 0%, 92%)'};
+        color: ${isSelected ? color : 'hsl(0, 0%, 40%)'};
+        background: ${isSelected ? 'white' : 'hsl(0, 0%, 95%)'};
         border-top: 1px solid hsl(0, 0%, ${isSelected ? 100 : 80}%);
         border-right: ${isSelected && i === 0 ? '1px solid hsl(0, 0%, 80%)' : '1px solid transparent'};
         border-left: ${isSelected && i === 1 ? '1px solid hsl(0, 0%, 80%)' : '1px solid transparent'};
@@ -57,22 +57,19 @@ export const Tabs = ui => {
       const isSignupSelected = currentPage === 'signup';
 
       return ui.html`
-        <div
-          id='tabs'
-          class=${classes.container}
-        >
-          <div
+        <div class='tabs ${classes.container}'>
+          <button
             style=${styles.tab(0, GREEN_SIGNUP, isSignupSelected)}
             @click=${onSelectSignUp}
           >
             ${_.get({ en: 'Sign Up', es: 'Registro' }, language)}
-          </div>
-          <div
+          </button>
+          <button
             style=${styles.tab(1, BLUE_SIGNIN, !isSignupSelected)}
             @click=${onSelectSignIn}
           >
             ${_.get({ en: 'Sign In', es: 'Acceso' }, language)}
-          </div>
+          </button>
         </div>
       `;
     }

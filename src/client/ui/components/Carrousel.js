@@ -26,7 +26,7 @@ export const Carrousel = ui => {
       const { screens, currentStep } = props;
 
       return ui.html`
-        <div id='carrousel' style=${styles.container}>
+        <main class='carrousel' style=${styles.container}>
           <div style=${styles.inner(currentStep)}>
             ${screens.map(screen => ui.html`
               <div style=${styles.screen}>
@@ -34,7 +34,7 @@ export const Carrousel = ui => {
               </div>
             `)}
           </div>
-        </div>
+        </main>
       `;
     }
 

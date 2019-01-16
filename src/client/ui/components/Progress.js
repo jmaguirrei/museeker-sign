@@ -25,7 +25,7 @@ export const Progress = ui => {
       const { numSteps, currentStep } = props;
 
       return ui.html`
-        <div id='progress' style=${styles.container}>
+        <div class='progress' style=${styles.container}>
           ${_.range(numSteps).map(item => {
             const isSelected = item === currentStep;
             return ui.html`

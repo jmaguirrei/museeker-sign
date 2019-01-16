@@ -29,7 +29,7 @@ export const Token = ui => {
       const range = [ 0, 1, 2, 3, 4, 5 ];
 
       return ui.html`
-        <div id='token' class=${classes.container}>
+        <div class='token ${classes.container}'>
           ${range.map(i => {
             return ui.html`
               <div class=${classes.digit}>

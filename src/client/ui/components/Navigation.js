@@ -66,7 +66,7 @@ export const Navigation = ui => {
       } = props;
 
       return ui.html`
-        <div id='navigation' style=${styles.container}>
+        <div class='navigation' style=${styles.container}>
           ${IconsComp({
             icon: 'chevron-left',
             onClick: onClickLeft,

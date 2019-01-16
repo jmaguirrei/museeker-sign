@@ -54,7 +54,7 @@ export const Modal = ui => {
       const { pages, currentPage } = props;
 
       return ui.html`
-        <div id='modal' class=${classes.container}>
+        <div class='modal ${classes.container}'>
           <div class=${classes.modal}>
             ${Object.keys(pages).map(key => {
               const component = pages[key];

@@ -44,7 +44,7 @@ export const NumKeyboard = ui => {
       const ranges = [ [ 1, 2, 3, 4, 5, 6 ], [ 7, 8, 9, 0 ] ];
 
       return ui.html`
-        <div id='keyboard' class=${classes.container}>
+        <div class='keyboard ${classes.container}'>
           <div class=${classes.range}>
             ${ranges[0].map(i => {
               return ui.html`

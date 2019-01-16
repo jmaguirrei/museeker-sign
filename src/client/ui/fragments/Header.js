@@ -17,10 +17,9 @@ export const Header = ui => {
       container: `
         min-height: ${size};
         max-height: ${size};
-        width: 100%;
         display: flex;
         align-items: center;
-        padding: 0 30px;
+        padding: 0 25px;
         border-bottom: 1px solid hsl(0, 0%, 95%);
       `,
       image: `
@@ -41,14 +40,13 @@ export const Header = ui => {
       const src = ui.lib.Assets.COMPANY_LOGO;
 
       return ui.html`
-        <div
-          id='header'
+        <header
           class=${classes.container}
           style=${styles.container(numSteps)}
         >
           <img src=${src} alt='company-name' class=${classes.image} />
           ${numSteps > 0 ? Progress({ numSteps, currentStep }) : ''}
-        </div>
+        </header>
       `;
     }
 

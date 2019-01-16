@@ -53,10 +53,7 @@ export const PasswordOptions = ui => {
       const { forgot = false } = props;
 
       return ui.html`
-        <div
-          id='password-options'
-          class=${classes.container}
-        >
+        <div class='password-options ${classes.container}'>
           <div style=${styles.forgot(forgot)} @click=${actions.onClickForgot}>
             ${_.get({
               en: 'Forgot password?',
