@@ -1,1 +1,1 @@
-export const Colors = {  GREEN_WELCOME: 'mediumseagreen',  GREEN_SIGNUP: 'hsl(147, 50%, 47%)',  BLUE_SIGNIN: 'hsl(219, 79%, 58%)',  RED_WARNING: 'hsl(0, 65%, 60%)',};
+export const Colors = {  GREEN_WELCOME: 'mediumseagreen',  GREEN_SIGNUP: 'hsl(145, 45%, 27%)',  BLUE_SIGNIN: 'hsl(219, 80%, 42%)',  RED_WARNING: 'hsl(0, 65%, 60%)',};
