@@ -38,7 +38,7 @@
 
   "dependencies": {
     "@jmaguirrei/belt": "0.0.14",
-    "@jmaguirrei/server": "0.0.60",
+    "@jmaguirrei/server": "0.0.61",
     "@jmaguirrei/store": "0.0.43",
     "@jmaguirrei/ui": "0.0.76",
     "@sendgrid/mail": "^6.3.1"
