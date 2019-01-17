@@ -40,7 +40,7 @@
     "@jmaguirrei/belt": "0.0.16",
     "@jmaguirrei/server": "0.0.67",
     "@jmaguirrei/store": "0.0.45",
-    "@jmaguirrei/ui": "0.0.78",
+    "@jmaguirrei/ui": "0.0.79",
     "@sendgrid/mail": "^6.3.1"
   }
 }
