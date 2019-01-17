@@ -2,17 +2,6 @@
 <html lang='{{ language }}'>
   <head>
 
-    <!-- Global styles + Component Styles via dynamic classes -->
-    <style id='global-styles'>
-      @font-face { font-family: 'Source Sans Pro'; font-display: block; }
-      body { margin: 0; font-family: 'Source Sans Pro', sans-serif; -webkit-tap-highlight-color: rgba(0,0,0,0); }
-      div { box-sizing: border-box; }
-      svg { user-select: none; }
-      a { text-decoration: none; color: inherit; cursor: inherit; }
-      button:focus { outline:0; }
-      #root { position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
-    </style>
-    <style id='component-styles'>{{ component_styles }}</style>
 
     <!-- Google Analytics -->
     <script>
@@ -41,6 +30,18 @@
         s.parentNode.insertBefore(wf, s);
       })(document);
     </script>
+
+    <!-- Global styles + Component Styles via dynamic classes -->
+    <style id='global-styles'>
+      @font-face { font-family: 'Source Sans Pro'; font-display: block; font-style: normal; font-weight: 400; src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2'); }
+      body { margin: 0; font-family: 'Source Sans Pro', sans-serif; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+      div { box-sizing: border-box; }
+      svg { user-select: none; }
+      a { text-decoration: none; color: inherit; cursor: inherit; }
+      button:focus { outline:0; }
+      #root { position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
+    </style>
+    <style id='component-styles'>{{ component_styles }}</style>
 
     <!-- General Settings -->
     <meta charset='utf-8'>
