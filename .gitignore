@@ -4,9 +4,7 @@
 .DS_Store
 .eslintignore
 .eslintrc
-dist/icons/*
-dist/splash/*
-dist/assets/*
+dist
 env.json
 secrets.json
 node_modules/*

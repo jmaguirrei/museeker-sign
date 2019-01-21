@@ -6,7 +6,7 @@
   "scripts": {
     "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/'",
 
-    "build": "NODE_ENV=production parcel build ./src/client/app.js -o app.js",
+    "build": "NODE_ENV=production parcel build ./src/client/main.js -o main.js",
 
     "git-i1": "git add .",
     "git-i2": "git diff-index --quiet HEAD || git commit -m 'Initial commit'",
@@ -15,7 +15,7 @@
 
     "deploy": "npm run update-jmaguirrei && npm run build && npm run git-initial",
 
-    "browser": "parcel --no-hmr ./src/client/app.js -o app.js",
+    "browser": "parcel --no-hmr ./src/client/main.js -o main.js",
     "start-dev": "nodemon start-dev.js",
     "start-prod": "node start-prod.js"
   },
