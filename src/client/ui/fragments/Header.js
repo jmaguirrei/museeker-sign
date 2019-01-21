@@ -1,11 +1,11 @@
 
 
-export const Header = ui => {
+export const Header = client => {
 
-  const size = ui.lib.Sizes.HEADER_HEIGHT;
-  const { Progress } = ui.components;
+  const size = client.lib.Sizes.HEADER_HEIGHT;
+  const { Progress } = client.ui.components;
 
-  return ui.hoc({
+  return client.hoc({
 
     actions(props, store) {
       return {
@@ -37,9 +37,9 @@ export const Header = ui => {
     render({ props, classes, styles }) {
 
       const { numSteps = 0, currentStep } = props;
-      const src = ui.lib.Assets.COMPANY_LOGO;
+      const src = client.lib.Assets.COMPANY_LOGO;
 
-      return ui.html`
+      return client.html`
         <header
           class=${classes.container}
           style=${styles.container(numSteps)}

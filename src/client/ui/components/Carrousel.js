@@ -1,7 +1,7 @@
 
-export const Carrousel = ui => {
+export const Carrousel = client => {
 
-  return ui.hoc({
+  return client.hoc({
 
     styles: {
       container: `
@@ -25,10 +25,10 @@ export const Carrousel = ui => {
 
       const { screens, currentStep } = props;
 
-      return ui.html`
+      return client.html`
         <main class='carrousel' style=${styles.container}>
           <div style=${styles.inner(currentStep)}>
-            ${screens.map(screen => ui.html`
+            ${screens.map(screen => client.html`
               <div style=${styles.screen}>
                 ${screen()}
               </div>

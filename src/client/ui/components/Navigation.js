@@ -3,11 +3,11 @@ import { Icons } from './Icons';
 
 const size = 50;
 
-export const Navigation = ui => {
+export const Navigation = client => {
 
-  const IconsComp = Icons(ui);
+  const IconsComp = Icons(client);
 
-  return ui.hoc({
+  return client.hoc({
 
     styles: {
       container: `
@@ -28,7 +28,7 @@ export const Navigation = ui => {
       'signup-right-enabled': `
         background-position: center;
         transition: background 0.3s;
-        background: ${ui.lib.Colors.GREEN_SIGNUP};
+        background: ${client.lib.Colors.GREEN_SIGNUP};
         border-radius: 50%;
         fill: white;
         box-shadow: -1px 1px 3px -1px black;
@@ -41,7 +41,7 @@ export const Navigation = ui => {
       'signin-right-enabled': `
         background-position: center;
         transition: background 0.3s;
-        background: ${ui.lib.Colors.BLUE_SIGNIN};
+        background: ${client.lib.Colors.BLUE_SIGNIN};
         border-radius: 50%;
         fill: white;
         box-shadow: -1px 1px 3px -1px black;
@@ -65,7 +65,7 @@ export const Navigation = ui => {
         color,
       } = props;
 
-      return ui.html`
+      return client.html`
         <div class='navigation' style=${styles.container}>
           ${IconsComp({
             icon: 'chevron-left',

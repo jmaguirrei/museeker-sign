@@ -1,11 +1,11 @@
 
 import _ from '@jmaguirrei/belt';
 
-export const PasswordOptions = ui => {
+export const PasswordOptions = client => {
 
-  const { Icons } = ui.components;
+  const { Icons } = client.ui.components;
 
-  return ui.hoc({
+  return client.hoc({
 
     actions(props, store) {
       return {
@@ -52,7 +52,7 @@ export const PasswordOptions = ui => {
       const { isPasswordVisible, isIconVisible, language } = state;
       const { forgot = false } = props;
 
-      return ui.html`
+      return client.html`
         <div class='password-options ${classes.container}'>
           <div style=${styles.forgot(forgot)} @click=${actions.onClickForgot}>
             ${_.get({

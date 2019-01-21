@@ -2,11 +2,11 @@
 
 import { Icons } from './Icons';
 
-export const NumKeyboard = ui => {
+export const NumKeyboard = client => {
 
-  const IconsComp = Icons(ui);
+  const IconsComp = Icons(client);
 
-  return ui.hoc({
+  return client.hoc({
 
     classes: {
       container: `
@@ -43,11 +43,11 @@ export const NumKeyboard = ui => {
       const { onPressNum, onPressDel } = props;
       const ranges = [ [ 1, 2, 3, 4, 5, 6 ], [ 7, 8, 9, 0 ] ];
 
-      return ui.html`
+      return client.html`
         <div class='keyboard ${classes.container}'>
           <div class=${classes.range}>
             ${ranges[0].map(i => {
-              return ui.html`
+              return client.html`
                 <div style=${styles.digit(false)} @click=${() => onPressNum(i)}>
                   <span class=${classes.digitspan}>${i}</span>
                 </div>
@@ -56,7 +56,7 @@ export const NumKeyboard = ui => {
           </div>
           <div class=${classes.range}>
             ${ranges[1].map(i => {
-              return ui.html`
+              return client.html`
                 <div style=${styles.digit(false)} @click=${() => onPressNum(i)}>
                   <span class=${classes.digitspan}>${i}</span>
                 </div>

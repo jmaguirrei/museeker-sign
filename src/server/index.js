@@ -5,34 +5,31 @@ import path from 'path';
 import server from '@jmaguirrei/server';
 import methods from '/server/api/methods';
 import initServices from '/server/lib/services';
-import { routes } from '/lib/routes';
+import config from '../config.js';
 
-const nodeEnv = process.env.NODE_ENV || 'development';
-const envFile = require('../../env.json');
+const secretsFile = require('../../secrets.json');
+const processEnv = process.env.NODE_ENV || 'development';
+const configEnv = config.env[processEnv];
 
-const {
-  BASE_URL,
-  BASE_FOLDER,
-  HTTP_PORT,
-  MONGO_URI,
-  SENDGRID_API_KEY,
-  USE_SERVICE_WORKER,
-} = envFile[nodeEnv];
+const { MONGO_URI, SENDGRID_API_KEY } = secretsFile[processEnv];
 
-initServices({ SENDGRID_API_KEY });
-const config = {
-  moduleName: 'sign',
-  defaultRoute: 'signin',
-  baseUrl: BASE_URL,
-  baseFolder: BASE_FOLDER,
-  httpPort: HTTP_PORT,
-  mongoURI: MONGO_URI,
-  useServiceWorker: USE_SERVICE_WORKER,
-  distFolder: path.join(__dirname, '/../../dist'),
-};
-
-server.init({ config, methods, routes })
+server.init({
+  env: {
+    moduleName: 'sign',
+    mongoURI: MONGO_URI,
+    distFolder: path.join(__dirname, '/../../dist'),
+    rootFolder: path.join(__dirname, '/../../../_root'),
+    ...configEnv,
+  },
+  config: {
+    methods,
+    client: config.client,
+    pages: [ 'signin', 'signup', 'forgot', 'welcome' ],
+    defaultPage: 'signin',
+  },
+})
 .then(() => {
+  initServices({ SENDGRID_API_KEY });
   console.log('Server started, DB running...');
 })
 .catch(err => {

@@ -1,12 +1,12 @@
 
 import _ from '@jmaguirrei/belt';
 
-export const Tabs = ui => {
+export const Tabs = client => {
 
-  const size = ui.lib.Sizes.TABS_HEIGHT;
-  const { GREEN_SIGNUP, BLUE_SIGNIN } = ui.lib.Colors;
+  const size = client.lib.Sizes.TABS_HEIGHT;
+  const { GREEN_SIGNUP, BLUE_SIGNIN } = client.lib.Colors;
 
-  return ui.hoc({
+  return client.hoc({
 
     state(props, store) {
       return {
@@ -56,7 +56,7 @@ export const Tabs = ui => {
 
       const isSignupSelected = currentPage === 'signup';
 
-      return ui.html`
+      return client.html`
         <div class='tabs ${classes.container}'>
           <button
             style=${styles.tab(0, GREEN_SIGNUP, isSignupSelected)}

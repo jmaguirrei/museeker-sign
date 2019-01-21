@@ -1,9 +1,9 @@
 
 
 
-export const Button = ui => {
+export const Button = client => {
 
-  return ui.hoc({
+  return client.hoc({
 
     classes: {
       div: `
@@ -44,7 +44,7 @@ export const Button = ui => {
         onClick,
       } = props;
 
-      return ui.html`
+      return client.html`
         <div
           @click=${onClick}
           class=${classes.div}
@@ -52,7 +52,7 @@ export const Button = ui => {
         >
           ${
             href
-            ? ui.unsafeHTML(`<a href='${href}' class='${classes.a}'>${text}</a>`)
+            ? client.html.unsafeHTML(`<a href='${href}' class='${classes.a}'>${text}</a>`)
             : text
           }
         </div>

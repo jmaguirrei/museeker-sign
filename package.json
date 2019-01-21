@@ -4,30 +4,21 @@
   "author": "José Manuel Aguirre",
   "license": "MIT",
   "scripts": {
-    "b1": "rimraf dist",
-    "b2": "cpy '../_root/public/*.html' dist",
-    "b3": "parcel build ./src/client/app.js -o app.js",
-    "build": "NODE_ENV=production npm run b1 && npm run b2 && npm run b3",
+    "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/'",
+
+    "build": "NODE_ENV=production parcel build ./src/client/app.js -o app.js",
 
     "git-i1": "git add .",
     "git-i2": "git diff-index --quiet HEAD || git commit -m 'Initial commit'",
     "git-i3": "git push",
     "git-initial": "npm run git-i1 && npm run git-i2 && npm run git-i3",
 
-    "git-pack": "npm run update-jmaguirrei && npm run build && npm run git-initial",
+    "deploy": "npm run update-jmaguirrei && npm run build && npm run git-initial",
 
-    "i1": "npm install --save @jmaguirrei/belt",
-    "i2": "npm install --save @jmaguirrei/ui",
-    "i3": "npm install --save @jmaguirrei/store",
-    "i4": "npm install --save @jmaguirrei/server",
-    "i-prod": "npm install && npm run i1 && npm run i2 && npm run i3 && npm run i4",
-    "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/'",
-
-    "browser": "parcel --no-hmr ./src/client/app.js",
+    "browser": "parcel --no-hmr ./src/client/app.js -o app.js",
     "start-dev": "nodemon start-dev.js",
     "start-prod": "node start-prod.js"
   },
-
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-module-resolver": "^3.1.1",
@@ -35,12 +26,9 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0"
   },
-
   "dependencies": {
-    "@jmaguirrei/belt": "0.0.16",
-    "@jmaguirrei/server": "0.0.67",
-    "@jmaguirrei/store": "0.0.45",
-    "@jmaguirrei/ui": "0.0.79",
+    "@jmaguirrei/belt": "0.0.18",
+    "@jmaguirrei/server": "0.0.70",
     "@sendgrid/mail": "^6.3.1"
   }
 }

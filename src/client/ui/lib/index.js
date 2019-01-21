@@ -1,1 +1,0 @@
-export { Assets } from './Assets';export { Colors } from './Colors';export { IconsSVGs } from './IconsSVGs';export { Sizes } from './Sizes';

@@ -1,7 +1,7 @@
 
-export const Token = ui => {
+export const Token = client => {
 
-  return ui.hoc({
+  return client.hoc({
 
     classes: {
       container: `
@@ -28,10 +28,10 @@ export const Token = ui => {
       const { tokenDigits } = props;
       const range = [ 0, 1, 2, 3, 4, 5 ];
 
-      return ui.html`
+      return client.html`
         <div class='token ${classes.container}'>
           ${range.map(i => {
-            return ui.html`
+            return client.html`
               <div class=${classes.digit}>
                 ${tokenDigits[i] || ''}
               </div>

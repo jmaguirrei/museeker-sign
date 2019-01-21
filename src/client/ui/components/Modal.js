@@ -2,9 +2,9 @@
 
 const breakpoint = '768px';
 
-export const Modal = ui => {
+export const Modal = client => {
 
-  return ui.hoc({
+  return client.hoc({
 
     styles: {
       subcomponent: isSelected => `
@@ -53,12 +53,12 @@ export const Modal = ui => {
       // return ui.html`<div>Modal</div>`;
       const { pages, currentPage } = props;
 
-      return ui.html`
+      return client.html`
         <div class='modal ${classes.container}'>
           <div class=${classes.modal}>
             ${Object.keys(pages).map(key => {
               const component = pages[key];
-              return ui.html`
+              return client.html`
                 <div style=${styles.subcomponent(key === currentPage)}>
                   ${component()}
                 </div>

@@ -8,6 +8,7 @@ dist/icons/*
 dist/splash/*
 dist/assets/*
 env.json
+secrets.json
 node_modules/*
 package-lock.json
 start-dev.js

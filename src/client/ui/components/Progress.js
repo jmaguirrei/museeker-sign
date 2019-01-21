@@ -1,9 +1,9 @@
 
 import _ from '@jmaguirrei/belt';
 
-export const Progress = ui => {
+export const Progress = client => {
 
-  return ui.hoc({
+  return client.hoc({
 
     styles: {
       container: `
@@ -24,11 +24,11 @@ export const Progress = ui => {
 
       const { numSteps, currentStep } = props;
 
-      return ui.html`
+      return client.html`
         <div class='progress' style=${styles.container}>
           ${_.range(numSteps).map(item => {
             const isSelected = item === currentStep;
-            return ui.html`
+            return client.html`
               <div style=${styles.item(isSelected)}></div>
             `;
           })}

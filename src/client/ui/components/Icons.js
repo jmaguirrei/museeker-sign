@@ -1,9 +1,9 @@
 
-export const Icons = ui => {
+export const Icons = client => {
 
-  const { IconsSVGs } = ui.lib;
+  const { IconsSVGs } = client.lib;
 
-  return ui.hoc({
+  return client.hoc({
 
     styles: {
       div: (size, enabled, inStyle = '') => `
@@ -30,13 +30,13 @@ export const Icons = ui => {
 
       const onClick = () => enabled ? props.onClick() : undefined;
 
-      return ui.html`
+      return client.html`
         <div
           class=${className}
           style=${styles.div(size, enabled, inStyle)}
           @click=${onClick}
         >
-          ${ui.unsafeHTML(IconsSVGs[icon])}
+          ${client.html.unsafeHTML(IconsSVGs[icon])}
         </div>
       `;
     }
