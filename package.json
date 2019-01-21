@@ -6,7 +6,7 @@
   "scripts": {
     "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/'",
 
-    "build": "NODE_ENV=production parcel build ./src/client/main.js -o main.js",
+    "build": "NODE_ENV=production parcel build ./src/client/main.js -o main.js --no-source-maps",
 
     "git-i1": "git add .",
     "git-i2": "git diff-index --quiet HEAD || git commit -m 'Initial commit'",
