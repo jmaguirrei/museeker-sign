@@ -6,7 +6,7 @@
   "scripts": {
     "update-jmaguirrei": "ncu -u '/^@jmaguirrei.*$/'",
 
-    "build": "NODE_ENV=production parcel build ./src/client/main.js -o main.js --no-source-maps",
+    "build": "NODE_ENV=production parcel build ./src/client/main.js -d ../_root/js -o sign-main.js --no-source-maps",
 
     "git-i1": "git add .",
     "git-i2": "git diff-index --quiet HEAD || git commit -m 'Initial commit'",
@@ -15,7 +15,7 @@
 
     "deploy": "npm run update-jmaguirrei && npm run build && npm run git-initial",
 
-    "browser": "parcel --no-hmr ./src/client/main.js -o main.js",
+    "browser": "parcel --no-source-maps --no-hmr ./src/client/main.js -d ../_root/_dev/js -o sign-main.js",
     "start-dev": "nodemon start-dev.js",
     "start-prod": "node start-prod.js"
   },
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@jmaguirrei/belt": "0.0.18",
-    "@jmaguirrei/server": "0.0.72",
+    "@jmaguirrei/server": "0.0.74",
     "@sendgrid/mail": "^6.3.1"
   }
 }
