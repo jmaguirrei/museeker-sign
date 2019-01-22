@@ -27,8 +27,8 @@
     "babel-register": "^6.26.0"
   },
   "dependencies": {
-    "@jmaguirrei/belt": "0.0.18",
-    "@jmaguirrei/server": "0.0.74",
+    "@jmaguirrei/belt": "0.0.20",
+    "@jmaguirrei/server": "0.0.75",
     "@sendgrid/mail": "^6.3.1"
   }
 }
